@@ -2,32 +2,28 @@
 layout: default
 title: "Inicio"
 ---
-<section style="text-align:center;padding:5rem 0">
-  <h1 style="font-size:3rem;font-weight:800;margin-bottom:1.5rem">
-    <span style="background:linear-gradient(to right,#22d3ee,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Impulsa tu negocio</span>
-  </h1>
-  <p style="font-size:1.25rem;color:#94a3b8;margin-bottom:2.5rem;max-width:48rem;margin-left:auto;margin-right:auto">Desarrollo de software a medida, herramientas digitales y contenido de valor para hacer crecer tu proyecto.</p>
-  
-  <div style="display:flex;justify-content:center;gap:1rem;margin-bottom:3rem">
-    <a href="{{ '/servicios' | relative_url }}" style="padding:0.75rem 1.5rem;background:linear-gradient(to right,#06b6d4,#3b82f6);color:white;border:none;border-radius:9999px;font-weight:500;text-decoration:none;font-size:1rem">Servicios</a>
-    <a href="{{ '/software' | relative_url }}" style="padding:0.75rem 1.5rem;background:#1e293b;color:#cbd5e1;border:none;border-radius:9999px;font-weight:500;text-decoration:none;font-size:1rem">Software</a>
+<section class="hero">
+  <h1><span class="gradient-text">Impulsa tu negocio</span></h1>
+  <p>Desarrollo de software a medida, herramientas digitales y contenido de valor para hacer crecer tu proyecto.</p>
+  <div class="buttons">
+    <a href="/mi-portal-digital/servicios" class="btn-primary">Servicios</a>
+    <a href="/mi-portal-digital/software" class="btn-secondary">Software</a>
   </div>
-
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:64rem;margin:0 auto">
-    <div style="background:rgba(30,41,59,0.7);backdrop-filter:blur(12px);border:1px solid rgba(148,163,184,0.1);border-radius:0.75rem;padding:1.5rem;text-align:left">
-      <i class="fa-solid fa-code" style="font-size:2.25rem;color:#22d3ee;margin-bottom:1rem;display:block"></i>
-      <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.5rem;color:white">Desarrollo web</h3>
-      <p style="color:#94a3b8;font-size:0.875rem">Sitios rápidos, modernos y optimizados con JAMstack.</p>
+  <div class="grid-3">
+    <div class="card">
+      <i class="fa-solid fa-code"></i>
+      <h3>Desarrollo web</h3>
+      <p>Sitios rápidos, modernos y optimizados con las últimas tecnologías JAMstack.</p>
     </div>
-    <div style="background:rgba(30,41,59,0.7);backdrop-filter:blur(12px);border:1px solid rgba(148,163,184,0.1);border-radius:0.75rem;padding:1.5rem;text-align:left">
-      <i class="fa-solid fa-mobile-screen" style="font-size:2.25rem;color:#22d3ee;margin-bottom:1rem;display:block"></i>
-      <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.5rem;color:white">Apps móviles</h3>
-      <p style="color:#94a3b8;font-size:0.875rem">Aplicaciones híbridas con tecnologías multiplataforma.</p>
+    <div class="card">
+      <i class="fa-solid fa-mobile-screen"></i>
+      <h3>Apps móviles</h3>
+      <p>Aplicaciones híbridas y nativas con tecnologías multiplataforma.</p>
     </div>
-    <div style="background:rgba(30,41,59,0.7);backdrop-filter:blur(12px);border:1px solid rgba(148,163,184,0.1);border-radius:0.75rem;padding:1.5rem;text-align:left">
-      <i class="fa-solid fa-chart-line" style="font-size:2.25rem;color:#22d3ee;margin-bottom:1rem;display:block"></i>
-      <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.5rem;color:white">Consultoría</h3>
-      <p style="color:#94a3b8;font-size:0.875rem">Estrategia digital para escalar tu negocio.</p>
+    <div class="card">
+      <i class="fa-solid fa-chart-line"></i>
+      <h3>Consultoría</h3>
+      <p>Estrategia digital y asesoría técnica para escalar tu negocio.</p>
     </div>
   </div>
 </section>

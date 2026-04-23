@@ -1,9 +1,30 @@
 ﻿---
-layout: page
+layout: default
 title: "Servicios"
-description: "Soluciones profesionales a medida"
 ---
-- **Desarrollo Web**: Sitios estáticos y dinámicos con JAMstack, HTML5, CSS3 y JavaScript moderno.
-- **Desarrollo de Software**: Aplicaciones de escritorio y herramientas CLI.
-- **Consultoría Técnica**: Auditorías de rendimiento, accesibilidad y SEO.
-- **Mantenimiento y Soporte**: Actualización continua de tus plataformas.
+<section class="hero">
+  <h1><span class="gradient-text">Nuestros Servicios</span></h1>
+  <p>Soluciones profesionales a medida para tu negocio.</p>
+</section>
+<div class="grid-3" style="margin-top:2rem">
+  <div class="card">
+    <i class="fa-solid fa-globe"></i>
+    <h3>Desarrollo Web</h3>
+    <p>Sitios estáticos y dinámicos con HTML5, CSS3, JavaScript moderno y JAMstack.</p>
+  </div>
+  <div class="card">
+    <i class="fa-solid fa-code"></i>
+    <h3>Desarrollo de Software</h3>
+    <p>Aplicaciones de escritorio, herramientas CLI y sistemas backend.</p>
+  </div>
+  <div class="card">
+    <i class="fa-solid fa-magnifying-glass-chart"></i>
+    <h3>Consultoría Técnica</h3>
+    <p>Auditorías de rendimiento, accesibilidad, SEO y arquitectura de software.</p>
+  </div>
+  <div class="card">
+    <i class="fa-solid fa-headset"></i>
+    <h3>Soporte y Mantenimiento</h3>
+    <p>Actualización continua y soporte técnico para tus plataformas.</p>
+  </div>
+</div>

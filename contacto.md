@@ -1,10 +1,18 @@
 ﻿---
-layout: page
+layout: default
 title: "Contacto"
-description: "Envíanos un mensaje o consulta."
 ---
-For inquiries, collaborations, or support, fill out the form or email us.
-
-<button @click="$dispatch('open-contact')" class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full font-semibold">
-  <i class="fa-solid fa-envelope mr-2"></i> Open contact form
-</button>
+<section class="hero">
+  <h1><span class="gradient-text">Contacto</span></h1>
+  <p>¿Tienes un proyecto en mente? Escríbeme.</p>
+</section>
+<div style="max-width:500px;margin:2rem auto">
+  <div class="card">
+    <form action="https://formspree.io/f/mojyykdg" method="POST">
+      <input type="text" name="name" placeholder="Nombre" required style="width:100%;padding:12px;margin-bottom:1rem;background:#1e293b;border:1px solid #334155;border-radius:8px;color:#fff;font-family:Inter,sans-serif">
+      <input type="email" name="email" placeholder="Email" required style="width:100%;padding:12px;margin-bottom:1rem;background:#1e293b;border:1px solid #334155;border-radius:8px;color:#fff;font-family:Inter,sans-serif">
+      <textarea name="message" rows="5" placeholder="Mensaje" required style="width:100%;padding:12px;margin-bottom:1rem;background:#1e293b;border:1px solid #334155;border-radius:8px;color:#fff;font-family:Inter,sans-serif;resize:vertical"></textarea>
+      <button type="submit" class="btn-primary" style="width:100%">Enviar mensaje</button>
+    </form>
+  </div>
+</div>
