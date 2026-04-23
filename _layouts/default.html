@@ -6,11 +6,13 @@
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
   <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
-<body class="bg-slate-950 text-slate-200 antialiased" style="font-family:Inter,sans-serif">
+<body class="bg-slate-950 text-slate-200 antialiased" style="font-family:'Inter',sans-serif">
   <header style="position:sticky;top:0;z-index:50;background:rgba(15,23,42,0.8);backdrop-filter:blur(12px);border-bottom:1px solid #1e293b;padding:0 1rem">
     <div style="max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:64px">
       <a href="{{ '/' | relative_url }}" style="font-size:1.25rem;font-weight:700;background:linear-gradient(to right,#22d3ee,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none">{{ site.title }}</a>
