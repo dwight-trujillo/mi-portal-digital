@@ -8,7 +8,7 @@ permissions:
   pages: write
   id-token: write
 concurrency:
-  group: 'pages'
+  group: pages
   cancel-in-progress: false
 jobs:
   build:
@@ -22,7 +22,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+          cache: npm
       - run: npm ci
       - run: npx @tailwindcss/cli -i ./assets/css/input.css -o ./assets/css/main.css --minify
       - run: bundle exec jekyll build --trace
