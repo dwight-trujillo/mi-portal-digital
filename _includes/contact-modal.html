@@ -1,0 +1,16 @@
+﻿<div x-data="contactForm" @open-contact.window="showModal = true" x-show="showModal" @click.self="showModal = false" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50" style="display:none;" x-cloak>
+  <div class="bg-slate-800 p-6 rounded-lg max-w-md w-full shadow-2xl" @click.stop>
+    <h3 class="text-xl font-semibold text-white mb-4" x-text="lang === 'en' ? 'Send me a message' : 'Envíame un mensaje'"></h3>
+    <form @submit.prevent="submitForm" method="POST" action="https://formspree.io/f/mojyykdg">
+      <input type="text" x-model="name" placeholder="Name" required class="w-full mb-3 p-2 rounded bg-slate-700 text-white">
+      <input type="email" x-model="email" placeholder="Email" required class="w-full mb-3 p-2 rounded bg-slate-700 text-white">
+      <textarea x-model="message" rows="4" placeholder="Message" required class="w-full mb-3 p-2 rounded bg-slate-700 text-white"></textarea>
+      <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white p-2 rounded font-medium">
+        <span x-show="status === 'idle'" x-text="lang === 'en' ? 'Send' : 'Enviar'"></span>
+        <span x-show="status === 'loading'"><i class="fa-solid fa-spinner fa-spin"></i></span>
+        <span x-show="status === 'success'" class="text-green-300"><i class="fa-solid fa-check"></i> <span x-text="lang === 'en' ? 'Sent!' : '¡Enviado!'"></span></span>
+        <span x-show="status === 'error'" class="text-red-300"> <span x-text="lang === 'en' ? 'Error. Try again.' : 'Error. Intenta de nuevo.'"></span></span>
+      </button>
+    </form>
+  </div>
+</div>
