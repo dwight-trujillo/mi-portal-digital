@@ -1,7 +1,0 @@
-﻿# Data de herramientas para generar el menú 
-# uso en listados automáticos.
-<tools:
-  - name: "Markdown to HTML"
-    link: "/herramientas/markdown-to-html/"
-  - name: "JavaScript Formatter"
-    link: "/herramientas/js-formatter/" # EJEMPLS, puedes eliminarlo o agregar más.
