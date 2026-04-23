@@ -1,0 +1,16 @@
+﻿<div x-data="newsletterSignup" class="glass-card rounded-xl p-6 text-center">
+  <h3 class="text-xl font-bold mb-2" x-text="lang === 'en' ? '📬 Get the C++ Booster Pack' : '📬 Obtén el C++ Booster Pack'"></h3>
+  <p class="text-slate-400 mb-4" x-text="lang === 'en' ? 'Join 500+ developers and receive checklists for CMake, debugging, and project structure.' : 'Únete a más de 500 desarrolladores y recibe checklists de CMake, depuración y estructura de proyectos.'"></p>
+  <form @submit.prevent="submit" class="flex flex-col sm:flex-row gap-3 justify-center">
+    <div style="position: absolute; left: -9999px;" aria-hidden="true">
+      <input type="text" x-model="honeypot" tabindex="-1" autocomplete="off">
+    </div>
+    <input type="email" x-model="email" :placeholder="lang === 'en' ? 'your@email.com' : 'tu@email.com'" required class="px-4 py-2 rounded-lg bg-slate-700 text-white flex-1 max-w-md">
+    <button type="submit" class="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold">
+      <span x-show="status === 'idle'" x-text="lang === 'en' ? 'Send me the pack' : 'Enviarme el pack'"></span>
+      <span x-show="status === 'loading'"><i class="fa-solid fa-spinner fa-spin"></i></span>
+      <span x-show="status === 'success'" x-text="lang === 'en' ? '✓ Check your inbox!' : '✓ ¡Revisa tu correo!'"></span>
+    </button>
+  </form>
+  <p x-show="error" class="text-red-400 text-sm mt-2" x-text="error"></p>
+</div>
