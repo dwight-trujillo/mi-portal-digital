@@ -1,22 +1,33 @@
 ﻿<!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang }}" class="scroll-smooth">
 <head>
-  {% include head.html %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
-<body class="bg-slate-950 text-slate-200 font-['Inter'] antialiased">
-<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-cyan-500 text-white p-2 z-50">Skip to content</a>
-  {% include header.html %}
-  <main id="main-content" role="main" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<body class="bg-slate-950 text-slate-200 antialiased" style="font-family:Inter,sans-serif">
+  <header style="position:sticky;top:0;z-index:50;background:rgba(15,23,42,0.8);backdrop-filter:blur(12px);border-bottom:1px solid #1e293b;padding:0 1rem">
+    <div style="max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:64px">
+      <a href="{{ '/' | relative_url }}" style="font-size:1.25rem;font-weight:700;background:linear-gradient(to right,#22d3ee,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none">{{ site.title }}</a>
+      <div style="display:flex;gap:8px">
+        <a href="{{ '/' | relative_url }}" style="color:#cbd5e1;padding:8px 12px;font-size:14px;text-decoration:none;border-radius:6px">Inicio</a>
+        <a href="{{ '/servicios' | relative_url }}" style="color:#cbd5e1;padding:8px 12px;font-size:14px;text-decoration:none;border-radius:6px">Servicios</a>
+        <a href="{{ '/software' | relative_url }}" style="color:#cbd5e1;padding:8px 12px;font-size:14px;text-decoration:none;border-radius:6px">Software</a>
+        <a href="{{ '/blog' | relative_url }}" style="color:#cbd5e1;padding:8px 12px;font-size:14px;text-decoration:none;border-radius:6px">Blog</a>
+        <a href="{{ '/contacto' | relative_url }}" style="color:#cbd5e1;padding:8px 12px;font-size:14px;text-decoration:none;border-radius:6px">Contacto</a>
+      </div>
+    </div>
+  </header>
+  <main style="max-width:1280px;margin:0 auto;padding:2rem 1rem">
     {{ content }}
   </main>
-  {% include footer.html %}
-  {% include contact-modal.html %}
-  {% include cookie-consent.html %}
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.1/dist/cdn.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
-  <script src="https://cdnjs.com/ajax/libs/marked/15.0.7/marked.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
-  <script src="https://cdnjs.com/ajax/libs/jszip/3.10.1/jszip.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
-  <script src="https://cdnjs.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
-  <script src="https://cdnjs.com/ajax/libs/dompurify/3.2.4/purify.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
-  <script type="module" src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <footer style="border-top:1px solid #1e293b;padding:2rem 1rem;text-align:center;color:#64748b;font-size:14px;margin-top:4rem">
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }}. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>

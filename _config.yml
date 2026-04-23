@@ -1,20 +1,44 @@
-# Configuraci?n m?nima
-title: "Mi Portal Digital"
-description: "Portal profesional"
+﻿title: "Mi Portal Digital"
+tagline: "Servicios profesionales, software y contenido de calidad"
+description: "Portal integral que combina servicios, venta de software y monetización pasiva con contenido estático."
 url: "https://dwight-trujillo.github.io"
 baseurl: "/mi-portal-digital"
+author: "Dwight Trujillo"
+lang: es
+locale: es_ES
 
-# Plugins desactivados
-plugins: []
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+
+adsense:
+  client: "ca-pub-XXXXXXXXXX"
+  slot: "XXXXXXXXXX"
+
+gumroad:
+  product_id: "abc123"
+
+buymeacoffee:
+  username: "tuusuario"
 
 exclude:
+  - node_modules
   - Gemfile
   - Gemfile.lock
-  - node_modules
   - package.json
   - package-lock.json
   - README.md
   - docs
-  - _layouts
-  - _includes
-  - _posts

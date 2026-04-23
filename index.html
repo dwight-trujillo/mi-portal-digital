@@ -1,51 +1,33 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mi Portal Digital</title>
-<link rel="icon" href="/mi-portal-digital/assets/img/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-<link rel="stylesheet" href="/mi-portal-digital/assets/css/main.css">
-</head>
-<body class="bg-slate-950 text-slate-200 antialiased" style="font-family:Inter,sans-serif">
-  <header style="position:sticky;top:0;z-index:50;background:rgba(15,23,42,0.8);backdrop-filter:blur(12px);border-bottom:1px solid #1e293b;padding:0 1rem">
-    <div style="max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:64px">
-      <span style="font-size:1.25rem;font-weight:700;background:linear-gradient(to right,#22d3ee,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Mi Portal Digital</span>
-      <div style="display:flex;gap:8px">
-        <a href="/mi-portal-digital/" style="color:#cbd5e1;padding:8px 12px;font-size:14px;text-decoration:none">Inicio</a>
-        <a href="/mi-portal-digital/servicios" style="color:#cbd5e1;padding:8px 12px;font-size:14px;text-decoration:none">Servicios</a>
-        <a href="/mi-portal-digital/software" style="color:#cbd5e1;padding:8px 12px;font-size:14px;text-decoration:none">Software</a>
-        <a href="/mi-portal-digital/blog" style="color:#cbd5e1;padding:8px 12px;font-size:14px;text-decoration:none">Blog</a>
-        <a href="/mi-portal-digital/contacto" style="color:#cbd5e1;padding:8px 12px;font-size:14px;text-decoration:none">Contacto</a>
-      </div>
+﻿---
+layout: default
+title: "Inicio"
+---
+<section style="text-align:center;padding:5rem 0">
+  <h1 style="font-size:3rem;font-weight:800;margin-bottom:1.5rem">
+    <span style="background:linear-gradient(to right,#22d3ee,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Impulsa tu negocio</span>
+  </h1>
+  <p style="font-size:1.25rem;color:#94a3b8;margin-bottom:2.5rem;max-width:48rem;margin-left:auto;margin-right:auto">Desarrollo de software a medida, herramientas digitales y contenido de valor para hacer crecer tu proyecto.</p>
+  
+  <div style="display:flex;justify-content:center;gap:1rem;margin-bottom:3rem">
+    <a href="{{ '/servicios' | relative_url }}" style="padding:0.75rem 1.5rem;background:linear-gradient(to right,#06b6d4,#3b82f6);color:white;border:none;border-radius:9999px;font-weight:500;text-decoration:none;font-size:1rem">Servicios</a>
+    <a href="{{ '/software' | relative_url }}" style="padding:0.75rem 1.5rem;background:#1e293b;color:#cbd5e1;border:none;border-radius:9999px;font-weight:500;text-decoration:none;font-size:1rem">Software</a>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:64rem;margin:0 auto">
+    <div style="background:rgba(30,41,59,0.7);backdrop-filter:blur(12px);border:1px solid rgba(148,163,184,0.1);border-radius:0.75rem;padding:1.5rem;text-align:left">
+      <i class="fa-solid fa-code" style="font-size:2.25rem;color:#22d3ee;margin-bottom:1rem;display:block"></i>
+      <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.5rem;color:white">Desarrollo web</h3>
+      <p style="color:#94a3b8;font-size:0.875rem">Sitios rápidos, modernos y optimizados con JAMstack.</p>
     </div>
-  </header>
-  <main style="max-width:1280px;margin:0 auto;padding:80px 16px;text-align:center">
-    <h1 style="font-size:3rem;font-weight:800;margin-bottom:24px"><span style="background:linear-gradient(to right,#22d3ee,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Impulsa tu negocio</span></h1>
-    <p style="font-size:1.25rem;color:#94a3b8;margin-bottom:40px;max-width:700px;margin-left:auto;margin-right:auto">Desarrollo de software a medida, herramientas digitales y contenido de valor.</p>
-    <div style="display:flex;justify-content:center;gap:16px;margin-bottom:48px">
-      <button style="padding:12px 24px;background:linear-gradient(to right,#06b6d4,#3b82f6);color:#fff;border:none;border-radius:9999px;font-size:1rem;font-weight:500;cursor:pointer">Servicios</button>
-      <button style="padding:12px 24px;background:#1e293b;color:#cbd5e1;border:none;border-radius:9999px;font-size:1rem;font-weight:500;cursor:pointer">Software</button>
+    <div style="background:rgba(30,41,59,0.7);backdrop-filter:blur(12px);border:1px solid rgba(148,163,184,0.1);border-radius:0.75rem;padding:1.5rem;text-align:left">
+      <i class="fa-solid fa-mobile-screen" style="font-size:2.25rem;color:#22d3ee;margin-bottom:1rem;display:block"></i>
+      <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.5rem;color:white">Apps móviles</h3>
+      <p style="color:#94a3b8;font-size:0.875rem">Aplicaciones híbridas con tecnologías multiplataforma.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:900px;margin:0 auto">
-      <div style="background:rgba(30,41,59,0.7);backdrop-filter:blur(12px);border:1px solid rgba(148,163,184,0.1);border-radius:12px;padding:24px;text-align:left">
-        <i class="fa-solid fa-code" style="font-size:2rem;color:#22d3ee;margin-bottom:12px"></i>
-        <h3 style="color:#fff;font-size:1.25rem;font-weight:600;margin-bottom:8px">Desarrollo web</h3>
-        <p style="color:#94a3b8;font-size:14px">Sitios r?pidos, modernos y optimizados con JAMstack.</p>
-      </div>
-      <div style="background:rgba(30,41,59,0.7);backdrop-filter:blur(12px);border:1px solid rgba(148,163,184,0.1);border-radius:12px;padding:24px;text-align:left">
-        <i class="fa-solid fa-mobile-screen" style="font-size:2rem;color:#22d3ee;margin-bottom:12px"></i>
-        <h3 style="color:#fff;font-size:1.25rem;font-weight:600;margin-bottom:8px">Apps m?viles</h3>
-        <p style="color:#94a3b8;font-size:14px">Aplicaciones h?bridas multiplataforma.</p>
-      </div>
-      <div style="background:rgba(30,41,59,0.7);backdrop-filter:blur(12px);border:1px solid rgba(148,163,184,0.1);border-radius:12px;padding:24px;text-align:left">
-        <i class="fa-solid fa-chart-line" style="font-size:2rem;color:#22d3ee;margin-bottom:12px"></i>
-        <h3 style="color:#fff;font-size:1.25rem;font-weight:600;margin-bottom:8px">Consultor?a</h3>
-        <p style="color:#94a3b8;font-size:14px">Estrategia digital para escalar tu negocio.</p>
-      </div>
+    <div style="background:rgba(30,41,59,0.7);backdrop-filter:blur(12px);border:1px solid rgba(148,163,184,0.1);border-radius:0.75rem;padding:1.5rem;text-align:left">
+      <i class="fa-solid fa-chart-line" style="font-size:2.25rem;color:#22d3ee;margin-bottom:1rem;display:block"></i>
+      <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:0.5rem;color:white">Consultoría</h3>
+      <p style="color:#94a3b8;font-size:0.875rem">Estrategia digital para escalar tu negocio.</p>
     </div>
-  </main>
-</body>
-</html>
+  </div>
+</section>
