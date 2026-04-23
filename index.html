@@ -1,53 +1,51 @@
-﻿---
-layout: default
-title: "Inicio"
----
-<section x-data="{ activeTab: 'servicios' }" class="py-20 text-center">
-  <h1 class="text-5xl md:text-6xl font-extrabold mb-6">
-    <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Impulsa tu negocio</span>
-  </h1>
-  <p class="text-xl text-slate-300 mb-10 max-w-3xl mx-auto">Desarrollo de software a medida, herramientas digitales y contenido de valor para hacer crecer tu proyecto.</p>
-
-  <div class="flex justify-center space-x-4 mb-12">
-    <button @click="activeTab = 'servicios'" :class="activeTab === 'servicios' ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white' : 'bg-slate-800 text-slate-300'" class="px-6 py-2 rounded-full font-medium transition">Servicios</button>
-    <button @click="activeTab = 'software'" :class="activeTab === 'software' ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white' : 'bg-slate-800 text-slate-300'" class="px-6 py-2 rounded-full font-medium transition">Software</button>
-  </div>
-
-  <div x-show="activeTab === 'servicios'" class="grid md:grid-cols-3 gap-6">
-    <div class="glass-card rounded-xl p-6 text-left">
-      <i class="fa-solid fa-code text-4xl text-cyan-400 mb-4"></i>
-      <h3 class="text-xl font-semibold mb-2">Desarrollo web</h3>
-      <p class="text-slate-400">Sitios rápidos, modernos y optimizados con JAMstack.</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Portal Digital</title>
+<link rel="icon" href="/mi-portal-digital/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="/mi-portal-digital/assets/css/main.css">
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased" style="font-family:Inter,sans-serif">
+  <header style="position:sticky;top:0;z-index:50;background:rgba(15,23,42,0.8);backdrop-filter:blur(12px);border-bottom:1px solid #1e293b;padding:0 1rem">
+    <div style="max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:64px">
+      <span style="font-size:1.25rem;font-weight:700;background:linear-gradient(to right,#22d3ee,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Mi Portal Digital</span>
+      <div style="display:flex;gap:8px">
+        <a href="/mi-portal-digital/" style="color:#cbd5e1;padding:8px 12px;font-size:14px;text-decoration:none">Inicio</a>
+        <a href="/mi-portal-digital/servicios" style="color:#cbd5e1;padding:8px 12px;font-size:14px;text-decoration:none">Servicios</a>
+        <a href="/mi-portal-digital/software" style="color:#cbd5e1;padding:8px 12px;font-size:14px;text-decoration:none">Software</a>
+        <a href="/mi-portal-digital/blog" style="color:#cbd5e1;padding:8px 12px;font-size:14px;text-decoration:none">Blog</a>
+        <a href="/mi-portal-digital/contacto" style="color:#cbd5e1;padding:8px 12px;font-size:14px;text-decoration:none">Contacto</a>
+      </div>
     </div>
-    <div class="glass-card rounded-xl p-6 text-left">
-      <i class="fa-solid fa-mobile-screen text-4xl text-cyan-400 mb-4"></i>
-      <h3 class="text-xl font-semibold mb-2">Apps móviles</h3>
-      <p class="text-slate-400">Aplicaciones híbridas con tecnologías multiplataforma.</p>
+  </header>
+  <main style="max-width:1280px;margin:0 auto;padding:80px 16px;text-align:center">
+    <h1 style="font-size:3rem;font-weight:800;margin-bottom:24px"><span style="background:linear-gradient(to right,#22d3ee,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Impulsa tu negocio</span></h1>
+    <p style="font-size:1.25rem;color:#94a3b8;margin-bottom:40px;max-width:700px;margin-left:auto;margin-right:auto">Desarrollo de software a medida, herramientas digitales y contenido de valor.</p>
+    <div style="display:flex;justify-content:center;gap:16px;margin-bottom:48px">
+      <button style="padding:12px 24px;background:linear-gradient(to right,#06b6d4,#3b82f6);color:#fff;border:none;border-radius:9999px;font-size:1rem;font-weight:500;cursor:pointer">Servicios</button>
+      <button style="padding:12px 24px;background:#1e293b;color:#cbd5e1;border:none;border-radius:9999px;font-size:1rem;font-weight:500;cursor:pointer">Software</button>
     </div>
-    <div class="glass-card rounded-xl p-6 text-left">
-      <i class="fa-solid fa-chart-line text-4xl text-cyan-400 mb-4"></i>
-      <h3 class="text-xl font-semibold mb-2">Consultoría</h3>
-      <p class="text-slate-400">Estrategia digital para escalar tu negocio.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:900px;margin:0 auto">
+      <div style="background:rgba(30,41,59,0.7);backdrop-filter:blur(12px);border:1px solid rgba(148,163,184,0.1);border-radius:12px;padding:24px;text-align:left">
+        <i class="fa-solid fa-code" style="font-size:2rem;color:#22d3ee;margin-bottom:12px"></i>
+        <h3 style="color:#fff;font-size:1.25rem;font-weight:600;margin-bottom:8px">Desarrollo web</h3>
+        <p style="color:#94a3b8;font-size:14px">Sitios r?pidos, modernos y optimizados con JAMstack.</p>
+      </div>
+      <div style="background:rgba(30,41,59,0.7);backdrop-filter:blur(12px);border:1px solid rgba(148,163,184,0.1);border-radius:12px;padding:24px;text-align:left">
+        <i class="fa-solid fa-mobile-screen" style="font-size:2rem;color:#22d3ee;margin-bottom:12px"></i>
+        <h3 style="color:#fff;font-size:1.25rem;font-weight:600;margin-bottom:8px">Apps m?viles</h3>
+        <p style="color:#94a3b8;font-size:14px">Aplicaciones h?bridas multiplataforma.</p>
+      </div>
+      <div style="background:rgba(30,41,59,0.7);backdrop-filter:blur(12px);border:1px solid rgba(148,163,184,0.1);border-radius:12px;padding:24px;text-align:left">
+        <i class="fa-solid fa-chart-line" style="font-size:2rem;color:#22d3ee;margin-bottom:12px"></i>
+        <h3 style="color:#fff;font-size:1.25rem;font-weight:600;margin-bottom:8px">Consultor?a</h3>
+        <p style="color:#94a3b8;font-size:14px">Estrategia digital para escalar tu negocio.</p>
+      </div>
     </div>
-  </div>
-
-  <div x-show="activeTab === 'software'" class="grid md:grid-cols-2 gap-6">
-    <div class="glass-card rounded-xl p-6">
-      <h3 class="text-2xl font-bold mb-2">Mi Aplicación Pro</h3>
-      <p class="text-slate-400 mb-4">Una herramienta que resuelve X problema.</p>
-      {% include monetization/gumroad.html %}
-    </div>
-    <div class="glass-card rounded-xl p-6">
-      <h3 class="text-2xl font-bold mb-2">Plantilla Premium</h3>
-      <p class="text-slate-400 mb-4">Kit de inicio para proyectos web.</p>
-      {% include monetization/gumroad.html %}
-    </div>
-  </div>
-</section>
-
-<section class="text-center py-20">
-  <h2 class="text-3xl font-bold mb-4">¿Listo para empezar?</h2>
-  <button @click="$dispatch('open-contact')" class="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full font-semibold text-lg hover:scale-105 transition-transform">
-    <i class="fa-solid fa-paper-plane mr-2"></i> Contáctame
-  </button>
-</section>
+  </main>
+</body>
+</html>
