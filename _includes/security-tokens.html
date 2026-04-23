@@ -1,0 +1,6 @@
+﻿<script>
+  if (!sessionStorage.getItem('csrfToken')) {
+    sessionStorage.setItem('csrfToken', crypto.randomUUID());
+  }
+  window.CSEF_TOKEN = sessionStorage.getItem('csrfToken');
+</script>

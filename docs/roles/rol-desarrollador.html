@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>Documentación para Desarrolladores – Mi Portal Digital</title><style>:root{--bg:#0f172a;--text:#e2e8f0;--accent:#22d3ee;--card:rgba(30,41,59,0.8);--border:#334155;}body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);max-width:900px;margin:auto;padding:2rem;line-height:1.7}h1,h2,h3{color:#fff;border-bottom:2px solid var(--accent);padding-bottom:0.3rem;margin-top:2rem}h1{font-size:2.5rem;border-bottom:3px solid var(--accent)}pre{background:#0f172a;border:1px solid #334155;padding:1rem;border-radius:8px;overflow-x:auto}code{background:#1e293b;padding:0.2em 0.4em;border-radius:4px;font-size:0.9em;color:#facc15}.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:1.5rem 0}ul li{margin:0.5rem 0}table{width:100%;border-collapse:collapse;margin:1rem 0}th,td{border:1px solid var(--border);padding:0.5rem}th{ background:#1e293b;}</style></head><body><h1>👋‍辏 Documentación para Desarrolladores</h1><h2>Visión general del stack</h2><table><tr><th>Tecnología</th><th>Versión</th><th>Función</th></tr><tr><td>Jekyll</td><td>4.x (github-pages)</td><td>Generador estático</td></tr><tr><td>Tailwind CSS</td><td>4.1.13</td><td>Estilos utilitarios</td></tr><tr><td>Alpine.js</td><td>3.15.1</td><td>Interactivadad</td></tr><tr><td>marked.js</td><td>15.0.7</td><td>Parseo Markdown</td></tr><tr><td>DOMPurify</td><td>3.2.4</td><td>Sanitización</td></tr><tr><td>JSZip</td><td>3.10.1</td><td>Generación ZIP</td></tr></table><h2>Entorno de desarrollo</h2><pre><code>git clone https://github.com/tu-usuario/tu-usuario.github.io.git
+cd tu-usuario.github.io
+Instalar dependencias
+bundle install
+npm install
+npm start</code></pre><h2>Estructura del proyecto</h2><pre>mi-portal-digital/
+├── .github/workflows/      # CI/CD y seguridad
+├── _includes/               # Componentes HTML reutilizables
+├── _layouts/               # Plantillas Jekyll
+├── _posts/                  # Artículos
+├── assets/                  # CSS, JS, imágenes
+├── herramientas/            # Páginas de herramientas
+├── _config.yml              # Configuración
+└── index.html                # Landing page</pre><h2>Añadir una nueva herramienta</h2><ol><li>Crear <code>herramientas/nueva-herramienta.md</code>.</li><li>Crear componente Alpine en <code>assets/js/components/nueva-herramienta.js</code>.</li><li>Importar en <code>assets/js/main.js</code>.</li><li>Listar en <code>herramientas.md</code>.</li></ol><h2>Seguridad en el código</h2><ul><li>Todo HTML dinámico se sanitiza con DOMPurify.</li><li>Formularios incluyen token CSRF y campo honeypot.</li><li>CSP restrictiva definida en <code>_includes/head.html</code>.</li></ul></body></html>

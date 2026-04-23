@@ -1,0 +1,13 @@
+﻿{
+  "name": "mi-portal-digital",
+  "private": true,
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "tailwindcss": "^4.1.13"
+  },
+  "scripts": {
+    "build:css": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./assets/css/main.css --minify",
+    "watch:css": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./assets/css/main.css --watch",
+    "start": "bundle exec jekyll serve --livereload"
+  }
+}

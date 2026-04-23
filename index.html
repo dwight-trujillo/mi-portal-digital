@@ -1,0 +1,53 @@
+﻿---
+layout: default
+title: "Inicio"
+---
+<section x-data="{ activeTab: 'servicios' }" class="py-20 text-center">
+  <h1 class="text-5xl md:text-6xl font-extrabold mb-6">
+    <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Impulsa tu negocio</span>
+  </h1>
+  <p class="text-xl text-slate-300 mb-10 max-w-3xl mx-auto">Desarrollo de software a medida, herramientas digitales y contenido de valor para hacer crecer tu proyecto.</p>
+
+  <div class="flex justify-center space-x-4 mb-12">
+    <button @click="activeTab = 'servicios'" :class="activeTab === 'servicios' ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white' : 'bg-slate-800 text-slate-300'" class="px-6 py-2 rounded-full font-medium transition">Servicios</button>
+    <button @click="activeTab = 'software'" :class="activeTab === 'software' ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white' : 'bg-slate-800 text-slate-300'" class="px-6 py-2 rounded-full font-medium transition">Software</button>
+  </div>
+
+  <div x-show="activeTab === 'servicios'" class="grid md:grid-cols-3 gap-6">
+    <div class="glass-card rounded-xl p-6 text-left">
+      <i class="fa-solid fa-code text-4xl text-cyan-400 mb-4"></i>
+      <h3 class="text-xl font-semibold mb-2">Desarrollo web</h3>
+      <p class="text-slate-400">Sitios rápidos, modernos y optimizados con JAMstack.</p>
+    </div>
+    <div class="glass-card rounded-xl p-6 text-left">
+      <i class="fa-solid fa-mobile-screen text-4xl text-cyan-400 mb-4"></i>
+      <h3 class="text-xl font-semibold mb-2">Apps móviles</h3>
+      <p class="text-slate-400">Aplicaciones híbridas con tecnologías multiplataforma.</p>
+    </div>
+    <div class="glass-card rounded-xl p-6 text-left">
+      <i class="fa-solid fa-chart-line text-4xl text-cyan-400 mb-4"></i>
+      <h3 class="text-xl font-semibold mb-2">Consultoría</h3>
+      <p class="text-slate-400">Estrategia digital para escalar tu negocio.</p>
+    </div>
+  </div>
+
+  <div x-show="activeTab === 'software'" class="grid md:grid-cols-2 gap-6">
+    <div class="glass-card rounded-xl p-6">
+      <h3 class="text-2xl font-bold mb-2">Mi Aplicación Pro</h3>
+      <p class="text-slate-400 mb-4">Una herramienta que resuelve X problema.</p>
+      {% include monetization/gumroad.html %}
+    </div>
+    <div class="glass-card rounded-xl p-6">
+      <h3 class="text-2xl font-bold mb-2">Plantilla Premium</h3>
+      <p class="text-slate-400 mb-4">Kit de inicio para proyectos web.</p>
+      {% include monetization/gumroad.html %}
+    </div>
+  </div>
+</section>
+
+<section class="text-center py-20">
+  <h2 class="text-3xl font-bold mb-4">¿Listo para empezar?</h2>
+  <button @click="$dispatch('open-contact')" class="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full font-semibold text-lg hover:scale-105 transition-transform">
+    <i class="fa-solid fa-paper-plane mr-2"></i> Contáctame
+  </button>
+</section>
