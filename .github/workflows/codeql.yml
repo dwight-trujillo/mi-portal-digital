@@ -5,10 +5,12 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  schedule:
+    - cron: '0 0 * * 0'
 
 jobs:
   analyze:
-    name: Analyze code
+    name: Analyze JavaScript/TypeScript
     runs-on: ubuntu-latest
     
     permissions:
@@ -19,32 +21,16 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'javascript', 'ruby' ]
+        language: [ 'javascript-typescript' ]  # Solo JavaScript/TypeScript
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    # LIMPIAR ESPACIO EN DISCO - SOLUCIÓN PRINCIPAL
-    - name: Free disk space
-      run: |
-        echo "=== Liberando espacio en disco ==="
-        sudo rm -rf /usr/share/dotnet
-        sudo rm -rf /opt/ghc
-        sudo rm -rf /usr/local/share/boost
-        sudo rm -rf /opt/hostedtoolcache/CodeQL
-        sudo docker system prune -af
-        echo "=== Espacio disponible ==="
-        df -h
-
-    # VERSIÓN ACTUALIZADA A v4
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v4
       with:
         languages: ${{ matrix.language }}
-        # REDUCIR USO DE MEMORIA Y HILOS
-        ram: 8192
-        threads: 2
 
     - name: Autobuild
       uses: github/codeql-action/autobuild@v4
